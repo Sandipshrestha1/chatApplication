@@ -1,3 +1,4 @@
+import 'package:chat_app/core/theme.dart';
 import 'package:flutter/material.dart';
 
 class MessagePage extends StatelessWidget {
@@ -44,19 +45,29 @@ class MessagePage extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
           Expanded(
               child: Container(
+                  decoration: BoxDecoration(
+                      color: DefaultColors.messageListPage,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50),
+                      )),
                   child: ListView(
-            children: [
-              _buildMessageTile(
-                  "Sandy S", "Sandipshrestha2050@gmail.com", "08:30 am"),
-              _buildMessageTile(
-                  "Ram S", "Ramshrestha2050@gmail.com", "08:30 am"),
-              _buildMessageTile(
-                  "Harry S", "Harryshrestha2050@gmail.com", "08:30 am"),
-              _buildMessageTile("Needdy S", "Nepali2050@gmail.com", "08:30 am"),
-            ],
-          )))
+                    children: [
+                      _buildMessageTile("Sandy S",
+                          "Sandipshrestha2050@gmail.com", "08:30 am"),
+                      _buildMessageTile(
+                          "Ram S", "Ramshrestha2050@gmail.com", "08:30 am"),
+                      _buildMessageTile(
+                          "Harry S", "Harryshrestha2050@gmail.com", "08:30 am"),
+                      _buildMessageTile(
+                          "Needdy S", "Nepali2050@gmail.com", "08:30 am"),
+                    ],
+                  )))
         ],
       ),
     );
